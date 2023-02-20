@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='style.css')}}">
+    {% endblock %}
+</head>
+<body>
+    <header>
+    <h1 id="heading1">Data Science</h1>
+
+    <nav class="navbar">
+        <ul >
+            <li><a href="/">Home</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/plans">Plan</a></li>
+            <li><a href="/notes">Notes</a></li>
+            <li><a href="/progress">Progress</a></li>
+            <div class='search'>
+                <input type="text" name="search" id="search"  placeholder="search here" />
+                <img src="{{ url_for('static', filename='logo.jpeg') }}" onclick="myFunction()">
+            </div>
+        </ul>
+        
+    </nav>  
+    
+    {% block content %}
+    {% endblock %}
+    </header>
+    <div class="content">
+
+    </div>
+    <div class="footer">
+        <p style="text-align: center;">@copyright to Edufrent.com</p>
+    </div>
+</body>
+</html>
