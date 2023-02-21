@@ -10,13 +10,44 @@
 
 
 {% block content %}
-
-<div class="left-plan">
+<div class="show-data">
+  
+  <form action="{{ url_for('date_chosen')}}" method="post">
+    <center><input type="date" id="date" name="date"><button type="submit">see plans</button></center>
+    
+  </form>
     
 </div>
+<div class="flex-container">
 
-<div class="right-plan">
+  <div class="flex-child magenta">
+    <ul>
+      {% for item in data[0] %}
+          {% for inner in item %}
 
+          <li>{{inner}}</li>
+
+          {% endfor %}
+      {% endfor %}
+      </ul>
+    
+    <div class="plan-edit-buttons">
+    <button onclick="">ADD TASK</button>
+    <button onclick="">EDIT TASK</button>
+    </div>
+
+  </div>
+  
+  <div class="flex-child green">
+    {% for item in data[1] %}
+      {% for inner in item %}
+
+      <li>{{inner}}</li>
+      {% endfor %}
+    {% endfor %}
+
+  </div>
+  
 </div>
 
 

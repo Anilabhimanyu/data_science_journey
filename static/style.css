@@ -50,3 +50,27 @@ border-radius: 50%;
     bottom: 10px;
     text-align: center;
 }
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+    background-color: lightskyblue;
+    height: 400px;
+    margin: 40px;
+}  
+
+.flex-child:first-child {
+    margin-right: 40px;
+    margin-left: 40px;
+    background-color: rgb(220, 224, 236);
+} 
+
+.plan-edit-buttons{
+    position:relative;
+    display: flex;
+    width: 30%;
+    height: 10%;
+}
